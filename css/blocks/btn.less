@@ -1,0 +1,45 @@
+// main: ../style.less
+
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @white;
+    text-decoration: none;
+
+    padding: 1.07em 1.79em;
+    border: 2px solid @white;
+
+    transition: all .2s linear;
+
+    &:hover {
+        color: @black;
+        border-color: @black;
+        background-color: #cbcbcb;
+    }
+
+    &--blue {
+        background-color: @blue;
+        border-color: @blue;
+
+        &:hover {
+            background-color: @black;
+            border-color: @black;
+            color: @white;
+        }
+
+    &--text {
+        text-transform: capitalize;
+    }
+
+    }
+
+    @media @tablet {
+        font-size: 10px;
+    }
+
+    @media @mobile-sm {
+        font-size: 8px;
+    }
+}

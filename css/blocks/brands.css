@@ -1,0 +1,18 @@
+.brands__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.brands__item {
+  padding: 0 15px;
+}
+.brands__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: .3;
+  transition: .2s linear;
+}
+.brands__img:hover {
+  opacity: 1;
+}

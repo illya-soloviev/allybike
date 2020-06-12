@@ -1,0 +1,146 @@
+// main: ../style.less
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 140px;
+}
+
+.intro__content {
+    position: absolute;
+    top: 20%;
+    left: 48%;
+    z-index: 100;
+
+    &--2 {
+        left: 58%;
+    }
+
+    &--3 {
+        left: 5%;
+    }
+
+    &--banner {
+        left: 65%;
+
+        @media @tablet {
+            left: 55%;
+        }
+
+        @media @mobile-sm {
+            left: 30%;
+        }
+    }
+}
+
+.intro__title {
+    font-size: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @media @ipad {
+        font-size: 26px;
+    }
+
+    @media @mobile {
+        font-size: 20px;
+    }
+
+    @media @mobile-sm {
+        font-size: 12px;
+    }
+
+    &--banner {
+        font-size: 20px;
+        font-weight: 400;
+
+        @media @ipad {
+            font-size: 18px;
+        }
+
+        @media @mobile {
+            font-size: 14px;
+        }
+
+        @media @mobile-sm {
+            font-size: 10px;
+        }
+    }
+}
+
+.intro__discount {
+    display: flex;
+    align-items: center;
+    line-height: .95;
+
+    margin-bottom: 10px;
+
+    &--banner {
+        margin-bottom: 0;
+    }
+}
+
+.intro__sale {
+    font-size: 170px;
+    font-weight: 700;
+
+    @media @ipad {
+        font-size: 90px;
+    }
+
+    @media @mobile {
+        font-size: 70px;
+    }
+
+    @media @mobile-sm {
+        font-size: 40px;
+    }
+}
+
+.intro__percent {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: .93;
+
+    @media @ipad {
+        font-size: 40px;
+        line-height: .73;
+    }
+
+    @media @mobile {
+        font-size: 35px;
+    }
+
+    @media @mobile-sm {
+        font-size: 20px;
+    }
+}
+
+.intro__text {
+    font-size: 44px;
+    font-weight: 700;
+    color: @white;
+    text-transform: uppercase;
+    line-height: 1;
+
+    margin-bottom: 10px;
+
+    @media @ipad {
+        font-size: 34px;
+    }
+
+    @media @mobile {
+        font-size: 25px;
+    }
+
+    @media @mobile-sm {
+        font-size: 15px;
+    }
+}

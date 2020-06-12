@@ -1,0 +1,48 @@
+// main: ../style.less
+
+.productsSlider {
+    position: relative;
+}
+
+.productsSlider .slick-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    z-index: 10;
+    margin-bottom: 9px;
+    
+    font-size: 0;
+    color: transparent;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    
+    width: 12px;
+    height: 12px;
+    border: 3px solid @gray-light;
+    
+    transition: .3s linear;
+    
+    &:focus {
+        outline: 0;
+    }
+    
+    &:hover {
+        border-color: @black;
+    }
+}
+
+.productsSlider .slick-prev {
+    margin-right: 35px;
+    
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(45deg);
+}
+
+.productsSlider .slick-next {
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(-45deg);
+}

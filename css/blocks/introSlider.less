@@ -1,0 +1,60 @@
+// main: ../style.less
+
+.introSlider {
+    position: relative;
+}
+
+.introSlider .slick-dots {
+    width: auto;
+    position: absolute;
+    top: 85%;
+    right: 8%;
+    z-index: 10;
+
+    display: flex;
+
+    @media @mobile-sm {
+        top: 100%;
+        right: 50%;
+
+        margin-top: 10px;
+        transform: translateX(50%);
+    }
+}
+
+.slick-dots li {
+    margin-right: 25px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    color: transparent;
+
+    width: 20px;
+    height: 20px;
+
+    background: @white;
+    padding: 0;
+    border: 0;
+
+    border-radius: 50%;
+
+    &:focus {
+        outline: 0;
+    }
+
+    @media @tablet {
+        width: 15px;
+        height: 15px;
+    }
+
+    @media @mobile-sm {
+        background: #999;
+    }
+}
+
+.slick-dots li.slick-active {
+    button {
+        background: @black;
+    }
+}

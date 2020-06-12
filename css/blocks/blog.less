@@ -1,0 +1,167 @@
+// main: ../style.less
+
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    
+    @media @tablet {
+        justify-content: center;
+    }
+    
+    @media @mobile {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+}
+
+.blog__item {
+    width: 33.33333%;
+    padding: 0 15px;
+    
+    @media @tablet {
+        width: 50%;
+        max-width: 330px;
+        margin-bottom: 20px;
+        
+        &:last-child {
+            margin: 0;
+        } 
+    }
+    
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+.blog__inner {
+    position: relative;
+    overflow: hidden;
+    
+    &:hover .blog__img {
+        filter: none;
+    }
+    
+    &:hover .blog__content {
+        top: 52%;
+    }
+    
+    @media @notebook {
+        &:hover .blog__content {
+            top: 45%;
+        }
+    }
+    
+    @media @tablet {
+        &:hover .blog__content {
+            top: 0;
+        }
+    }
+}
+
+.blog__img {
+    filter: grayscale(1);
+    transition: filter .3s linear;
+}
+
+.blog__content {
+    width: 100%;
+    position: absolute;
+    top: 68%;
+    left: 0;
+    z-index: 100;
+    
+    padding: 25px;
+    transition: .3s linear;
+    
+    @media @tablet {
+        top: 0;
+        margin-top: 100px;
+    }
+    
+    @media @mobile-sm {
+        position: static;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #463535;
+        margin: 0;
+    }
+}
+
+.blog__title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: @white;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    transition: .3s linear;
+    margin-bottom: 20px;
+    
+    &:hover {
+        color: @blue;
+    }
+    
+    @media @notebook {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
+
+.blog__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog__author {
+    font-size: 16px;
+    font-weight: 400;
+    color: @white;
+    
+    @media @notebook {
+        font-size: 13px;
+    }
+}
+
+.blog__date {
+    font-size: 16px;
+    font-weight: 400;
+    color: @white;
+    
+    &:before {
+        font-family: FontAwesome;
+        content: "\f017";
+        margin-right: 4px;
+    } 
+    
+    @media @notebook {
+        font-size: 13px;
+    }
+}
+
+.blog__comments {
+    font-size: 16px;
+    font-weight: 400;
+    color: @white;
+    text-decoration: none;
+    
+    transition: .3s linear;
+    
+    &:before {
+        font-family: FontAwesome;
+        content: "\f075";
+        margin-right: 4px;
+    }
+    
+    &:hover {
+        color: @blue;
+    }
+    
+    @media @notebook {
+        font-size: 13px;
+    }
+}

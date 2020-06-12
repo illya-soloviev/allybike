@@ -1,0 +1,146 @@
+// main: ../style.less
+
+.search {
+    width: 100%;
+    max-width: 190px;
+    height: 39px;
+    display: flex;
+
+    position: relative;
+
+    transition: z-index .25s ease-in-out, opacity .25s ease-in-out;
+
+    @media @tablet {
+        height: 60px;
+        max-width: none;
+        position: absolute;
+        z-index: -10;
+        opacity: 0;
+
+        &.active {
+            z-index: 1001;
+            opacity: 1;
+        }
+    }
+}
+
+.search__inp {
+    width: 80%;
+    border: 1px solid #e1e1e1;
+    padding: 11px 10px;
+
+    &::placeholder {
+        font-size: 15px;
+        line-height: 1;
+        color: #cebcbc;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:focus::placeholder {
+        color: #e1e1e1;
+    }
+
+    @media @tablet {
+        width: 100%;
+        padding: 11px 150px 11px 10px;
+    }
+
+    @media @mobile-sm {
+        padding-right: 100px;
+    }
+}
+
+.search__btn {
+    width: 20%;
+
+    background: none;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+
+    background-color: #333;
+    transition: background .2s linear;
+
+    &:after {
+        font-family: FontAwesome;
+        content: "\f002";
+        font-size: 16px;
+        color: @white;
+        line-height: 39px;
+
+        @media @tablet {
+            font-family: FontAwesome;
+            content: "\f002";
+            font-size: 25px;
+            color: @blue;
+            line-height: 39px;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        background-color: @blue;
+    }
+
+    @media @tablet {
+        width: auto;
+        position: absolute;
+        top: 11px;
+        right: 90px;
+
+        background-color: transparent;
+    }
+
+    @media @mobile-sm {
+        right: 70px;
+    }
+}
+
+.search__close {
+    display: none;
+
+    font-size: 0;
+    color: transparent;
+
+    position: absolute;
+    top: 12px;
+    right: 30px;
+
+    &:after {
+        font-family: FontAwesome;
+        content: "\f00d";
+        font-size: 34px;
+        color: @black;
+    }
+
+    @media @mobile-sm {
+        right: 20px;
+    }
+}
+
+.search.active .search__close {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

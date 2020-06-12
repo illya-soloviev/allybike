@@ -1,0 +1,45 @@
+// main: ../style.less
+
+.brands__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -15px;
+    
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+.brands__item {
+    padding: 0 15px;
+    
+    @media @notebook {
+        width: 33.33333%;
+        margin-bottom: 25px;
+    }
+    
+    @media @mobile-sm {
+        width: 50%;
+    }
+}
+
+.brands__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    opacity: .3;
+    transition: .2s linear;
+    
+    &:hover {
+        opacity: 1;
+    }
+    
+    @media @notebook {
+        margin: 0 auto;
+    }
+    
+    @media @tablet {
+        opacity: 1;
+    }
+}

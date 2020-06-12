@@ -1,0 +1,145 @@
+// main: ../style.less
+
+.footer {
+    background-color: @gray;
+    padding: 50px 0;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media @tablet {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    @media @mobile {
+        max-width: 550px;
+    }
+}
+
+.footer__group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+
+    @media @tablet {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    @media @mobile-sm {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__col {
+    &--small {
+        width: 28%;
+        position: relative;
+
+        @media @tablet {
+            width: 100%;
+        }
+    }
+
+    &--big {
+        width: 24%;
+
+        @media @tablet {
+            width: 40%;
+        }
+
+        @media @mobile {
+            width: 100%;
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+    }
+}
+
+.footer__title {
+    font-size: 14px;
+    font-weight: 400;
+    color: @white;
+    line-height: 1;
+
+    margin-bottom: 15px;
+
+    @media @tablet {
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    @media @mobile-sm {
+        font-size: 22px;
+    }
+}
+
+.footer__open {
+    display: none;
+    width: 25px;
+    height: 25px;
+    border: 1px solid @white;
+    padding: 3px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    &:after {
+        font-family: FontAwesome;
+        content: "\f107";
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+
+    @media @tablet {
+        display: inline-block;
+    }
+}
+
+.footer__col.active > .footer__open:after {
+    content: '\f077';
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.footer__list {
+    @media @tablet {
+        display: none;
+    }
+}
+
+.footer__col.active .footer__list {
+    display: block;
+}
+
+.footer__list-link {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    color: @green;
+    text-decoration: none;
+    line-height: 1;
+
+    transition: .3s linear;
+    margin-bottom: 15px;
+
+    &:hover {
+        color: @blue;
+    }
+
+    @media @tablet {
+        font-size: 14px;
+    }
+}

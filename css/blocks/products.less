@@ -1,0 +1,94 @@
+// main: ../style.less
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.products__item {
+    padding: 0 15px;
+}
+
+.products__header {
+    position: relative;
+}
+
+.products__new {
+    font-size: 12px;
+    font-weight: 700;
+    color: @white;
+    text-transform: uppercase;
+    
+    padding: 5px 10px;
+    background-color: @blue-light;
+    
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 100;
+}
+
+.products__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-bottom: 5px;
+}
+
+.products__name {
+    font-size: 14px;
+    font-weight: 400;
+    color: @black;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    transition: color .2s linear;
+    
+    &:hover {
+        color: @blue;
+    }  
+}
+
+.products__price {
+    font-size: 20px;
+    font-weight: 700;
+    color: @black;
+}
+
+.products__btn {
+    width: 39px;
+    height: 39px;
+    
+    background: none;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: @white-light;
+    
+    transition: .3s linear;
+    margin-left: 5px;
+    
+    &:hover {
+        background-color: @black;
+    }
+    
+    &:before {
+        font-family: FontAwesome;
+        font-size: 16px;
+        line-height: 39px;
+    }
+    
+    &:hover:before {
+        color: @white;
+    }
+    
+    &--like:before {
+        content: "\f004";
+    }
+        
+    &--info:before {
+         content: "\f0c9";   
+    } 
+}

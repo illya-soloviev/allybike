@@ -1,0 +1,46 @@
+// main: ../style.less
+
+.profile {
+    margin-left: 15px;
+}
+
+.profile__btn {
+    width: 39px;
+    height: 39px;
+    
+    background: none;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    
+    background-color: @white-light;
+    
+    transition: background .2s linear;
+    
+    &:before {
+        font-family: FontAwesome;
+        content: "\f007";
+        
+        font-size: 16px;
+        color: @black;
+        line-height: 39px;
+        
+        @media @tablet {
+            font-size: 25px;
+            color: @white;
+        }
+        
+    }
+    
+    &:focus {
+        outline: 0;
+    }
+    
+    &:hover {
+        background-color: @blue;
+    }
+    
+    @media @tablet {
+        background: none;
+    }
+}
